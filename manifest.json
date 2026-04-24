@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Cmd+Scroll Zoom",
+  "version": "1.0",
+  "description": "Zoom in/out with Cmd+MouseWheel like VS Code and Chrome",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["zoom.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": []
+}

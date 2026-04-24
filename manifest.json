@@ -1,14 +1,20 @@
 {
   "manifest_version": 2,
   "name": "Cmd+Scroll Zoom",
-  "version": "1.0",
-  "description": "Zoom in/out with Cmd+MouseWheel like VS Code and Chrome",
+  "version": "1.1",
+  "description": "Zoom in/out with Cmd+MouseWheel using Firefox native zoom",
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["zoom.js"],
+      "js": ["content.js"],
       "run_at": "document_start"
     }
-  ],
-  "permissions": []
+  ]
 }
